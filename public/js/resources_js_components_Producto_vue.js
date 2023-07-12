@@ -105,11 +105,16 @@ var render = function render() {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table table-striped"
-  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.productos, function (producto) {
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", [_vm.productos.length === 0 ? _c("tr", [_c("td", {
+    staticClass: "text-center",
+    attrs: {
+      colspan: "5"
+    }
+  }, [_vm._v("No hay registros")])]) : _vm._l(_vm.productos, function (producto) {
     return _c("tr", {
       key: producto.idProducto
     }, [_c("td", [_vm._v(_vm._s(producto.idProducto))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(producto.clave))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(producto.categoria))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(producto.producto))]), _vm._v(" "), _c("td", [_vm._v("$ " + _vm._s(_vm._f("toFixed")(producto.precio, 2)))])]);
-  }), 0)])])])])]);
+  })], 2)])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,

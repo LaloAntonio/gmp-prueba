@@ -18,7 +18,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                           <tr v-for="producto in productos" :key="producto.idProducto">
+                            <tr v-if="productos.length === 0">
+                                <td colspan="5" class="text-center">No hay registros</td>
+                            </tr>
+                           <tr v-else v-for="producto in productos" :key="producto.idProducto">
                                 <td>{{ producto.idProducto }}</td>
                                 <td>{{ producto.clave }}</td>
                                 <td>{{ producto.categoria }}</td>
